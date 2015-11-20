@@ -10,24 +10,16 @@ package stringSearches;
  * @author Elliot Himmelfarb
  *
  */
-public class StringSearch {
-	private String input = ""; //the string to be searched
-	private String target = ""; //the string to be found
-	private int timesFound = 0; //the number of times the substring was found
-	
-	
+public class StringSearch {	
 	// Constructors ////////////////////////////////////////////////
 	
 	public StringSearch() {
-		this.input = "";
-		this.target = "";
-		this.timesFound = 0;
 	}
 	
 	public StringSearch(String input, String target) {
-		this.input = input;
+		/*this.input = input;
 		this.target = target;
-		this.timesFound = 0;
+		this.timesFound = 0;*/
 	}
 	
 	
@@ -39,36 +31,17 @@ public class StringSearch {
 	 * @param target
 	 * @return number of times the target String was found inside the input String
 	 */
-	public int timesFoundSearch(String input, String target) {
-		for (int iii = 0; iii < input.length(); iii++) { 
-			if (input.substring(iii, (iii + (target.length() - 1))).equalsIgnoreCase("elliot")) {
-				this.timesFound++;
+	public int timesFoundSearch(String _input, String _target) {
+		
+		String input = _input;
+		String target = _target;
+		int timesFound = 0;
+		
+		for (int iii = 0; iii < (input.length() - (target.length() -1)); iii++) { 
+			if (input.substring(iii, (iii+target.length())).equalsIgnoreCase(target)) {
+				timesFound++;
 			}
 		}
-		return this.timesFound;
-	}
-	
-	
-	// Getters and Setters ////////////////////////////////////////////////
-	
-	public String getInput() {
-		return input;
-	}
-
-	public void setInput(String input) {
-		this.input = input;
-	}
-
-	public String getTarget() {
-		return target;
-	}
-
-	public void setTarget(String target) {
-		this.target = target;
-	}
-
-	public int getTimesFound() {
 		return timesFound;
 	}
-
 }

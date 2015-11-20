@@ -6,7 +6,7 @@ public class Test {
 		StringSearch search = new StringSearch();
 		
 		System.out.println(
-		search.timesFoundSearch("hsgt jKJASELLIOT", "elliot")
+		search.timesFoundSearch("hsgt jfdhgsdafasdtvasgdsafgelliotkjhgsadkjfgkjsdkjfsajhdelliotKJASELLIOT", "elliot")
 				);
 	}
 	
